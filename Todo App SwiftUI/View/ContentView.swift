@@ -50,30 +50,38 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(todos, id: \.self) { todo in
-                    HStack {
-                        Text(todo.name ?? "Unknnown")
-                        Spacer()
-                        Text(todo.priority ?? "Unknown")
-                    }
-                }//: Foreach
-                .onDelete(perform: deleteTodo)
+            ZStack {
+                List {
+                    ForEach(todos, id: \.self) { todo in
+                        HStack {
+                            Text(todo.name ?? "Unknnown")
+                            Spacer()
+                            Text(todo.priority ?? "Unknown")
+                        }
+                    }//: Foreach
+                    .onDelete(perform: deleteTodo)
+                    
+                } //: List
+                .navigationBarTitle("Todo", displayMode: .inline)
+                .navigationBarItems(
+                    leading: EditButton(),
+                    trailing: Button(action: {
+                        print("Add tapped")
+                        self.showingAddTodoView.toggle()
+                    }) {
+                        Image(systemName: "plus")
+                    })
+                .sheet(isPresented: $showingAddTodoView) {
+                    AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
+                }
                 
-            } //: List
-            .navigationBarTitle("Todo", displayMode: .inline)
-            .navigationBarItems(
-                leading: EditButton(),
-                trailing: Button(action: {
-                print("Add tapped")
-                self.showingAddTodoView.toggle()
-            }) {
-                Image(systemName: "plus")
-            })
-            .sheet(isPresented: $showingAddTodoView) {
-                AddTodoView().environment(\.managedObjectContext, self.managedObjectContext)
-            }
-        }
+                // MARK: No todo items
+                
+                if todos.count == 0 {
+                    EmptyListView()
+                }
+            } //: ZStack
+        } //: NavigationView
     }
     
 //    private func addItem() {

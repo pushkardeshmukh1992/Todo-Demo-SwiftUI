@@ -15,6 +15,7 @@
 		FA469FE62A8F5A3000ECB788 /* Todo_App_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA469FE42A8F5A3000ECB788 /* Todo_App_SwiftUI.xcdatamodeld */; };
 		FA469FEE2A8F5C4700ECB788 /* AddTodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA469FED2A8F5C4700ECB788 /* AddTodoView.swift */; };
 		FA86CF8F2A93C3D70095CB61 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA86CF8E2A93C3D70095CB61 /* Launch Screen.storyboard */; };
+		FA86CF922A93C7040095CB61 /* EmptyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA86CF912A93C7040095CB61 /* EmptyListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FA469FED2A8F5C4700ECB788 /* AddTodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoView.swift; sourceTree = "<group>"; };
 		FA86CF8E2A93C3D70095CB61 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		FA86CF902A93C57A0095CB61 /* Todo-App-SwiftUI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Todo-App-SwiftUI-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FA86CF912A93C7040095CB61 /* EmptyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				FA469FDB2A8F5A1900ECB788 /* ContentView.swift */,
 				FA469FED2A8F5C4700ECB788 /* AddTodoView.swift */,
+				FA86CF912A93C7040095CB61 /* EmptyListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				FA469FE32A8F5A3000ECB788 /* Persistence.swift in Sources */,
 				FA469FE62A8F5A3000ECB788 /* Todo_App_SwiftUI.xcdatamodeld in Sources */,
+				FA86CF922A93C7040095CB61 /* EmptyListView.swift in Sources */,
 				FA469FDC2A8F5A1900ECB788 /* ContentView.swift in Sources */,
 				FA469FDA2A8F5A1900ECB788 /* Todo_App_SwiftUIApp.swift in Sources */,
 				FA469FEE2A8F5C4700ECB788 /* AddTodoView.swift in Sources */,
