@@ -73,7 +73,7 @@ struct AddTodoView: View {
             }) {
                 Image(systemName: "xmark")
             })
-            .background(Color.purple)
+//            .background(Color.purple)
             .alert(isPresented: $errorShowing) {
                 Alert(title: Text(errorTitle), message: Text(errorMessage), dismissButton: .default(Text("Ok")))
             }
