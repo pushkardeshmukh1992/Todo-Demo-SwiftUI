@@ -26,9 +26,14 @@ struct AddTodoView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Form {
+                VStack(alignment: .leading, spacing: 20) {
                     // MARK: TODO Name
                     TextField("Todo", text: $name)
+                        .padding()
+                        .background(Color.init(uiColor: UIColor.lightGray))
+                        .cornerRadius(9)
+                        .font(.system(size: 24, weight: .bold, design: .default))
+                        
                     
                     // MARK: TODO Priority
                     Picker("Priority", selection: $priority) {
@@ -60,10 +65,20 @@ struct AddTodoView: View {
                         
                         self.presentationMode.wrappedValue.dismiss()
                        
-                    }
+                    } //: Button
+                    .font(.system(size: 24, weight: .bold, design: .default))
+                    .padding()
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .background(Color.blue)
+                    .cornerRadius(9)
+                    .foregroundColor(Color.white)
                     
                    
-                } //: Form
+                } //: VStack
+                .padding(.horizontal)
+                .padding(.vertical, 30)
+//                .background(Color.red)
+                
                 Spacer()
                 
             } //: VStack
